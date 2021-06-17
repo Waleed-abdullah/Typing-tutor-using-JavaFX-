@@ -16,13 +16,13 @@
    <children>
       <Pane prefHeight="111.0" prefWidth="1100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text fill="#0f4cb4" layoutX="494.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial, sans-serif; -fx-font-size: 2.5em; -fx-font-weight: Bolder; -fx-fill: white;" text="Atomic Type" textAlignment="CENTER" wrappingWidth="211.73675537109375" />
+            <Text fill="#fcfcfc" layoutX="494.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial, sans-serif; -fx-font-size: 2.5em; -fx-font-weight: Bolder;" text="Atomic Type" textAlignment="CENTER" wrappingWidth="211.73675537109375" />
             <ImageView fitHeight="102.0" fitWidth="124.0" layoutX="370.0" layoutY="-5.0">
                <image>
                   <Image url="@../icons/atom-png-27354.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="1070.0" layoutY="1.0" onMouseClicked="#closeApp">
+            <ImageView fx:id="ExitButton" fitHeight="18.0" fitWidth="24.0" layoutX="1070.0" layoutY="1.0">
                <image>
                   <Image url="@../icons/Red-Close-Button-Transparent.png" />
                </image>
@@ -30,7 +30,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fitHeight="18.0" fitWidth="24.0" layoutX="1036.0" layoutY="1.0" onMouseClicked="#minimizeApp">
+            <ImageView fx:id="MinimizeButton" fitHeight="18.0" fitWidth="24.0" layoutX="1036.0" layoutY="1.0">
                <image>
                   <Image url="@../icons/minimize-icon-61.png" />
                </image>

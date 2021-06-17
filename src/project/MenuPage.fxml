@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="650.0" prefWidth="1100.0">
-
+<AnchorPane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@MenuPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MenuPageController">
+   <children>
+      <AnchorPane layoutX="187.0" layoutY="-25.0" prefHeight="124.0" prefWidth="1100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="backButton" fitHeight="30.0" fitWidth="25.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/back.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="281.0" layoutY="23.0" prefHeight="78.0" prefWidth="537.0" styleClass="mainHeader" text="Welcome to the Main menu" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="192.0" layoutY="258.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="71.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/keyboardpng.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="45.0" layoutY="80.0" prefHeight="39.0" prefWidth="110.0" styleClass="speedTestOption" text="Typing Speed Test" textFill="WHITE" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="450.0" layoutY="258.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></AnchorPane>
+      <AnchorPane layoutX="710.0" layoutY="258.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></AnchorPane>
+   </children>
 </AnchorPane>
