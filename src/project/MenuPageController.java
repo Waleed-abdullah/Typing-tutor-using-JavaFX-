@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -26,6 +27,7 @@ public class MenuPageController implements Initializable {
 
 
     Stage stage;
+    private MouseEvent event;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -50,4 +52,35 @@ public class MenuPageController implements Initializable {
             }
         });
     }
+
+    @FXML
+    void openTypingSpeedMode(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("TypingSpeedMode.fxml"));
+        Scene typingSpeedMode = new Scene(root);
+
+        stage = (Stage) menuPane.getScene().getWindow();
+        stage.setScene(typingSpeedMode);
+        stage.show();
+    }
+
+    @FXML
+    void openScoreSummary(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("ScoreSummary.fxml"));
+        Scene typingSpeedMode = new Scene(root);
+
+        stage = (Stage) menuPane.getScene().getWindow();
+        stage.setScene(typingSpeedMode);
+        stage.show();
+    }
+
+    @FXML
+    void openRandomLettersTest(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("RandomLettersTest.fxml"));
+        Scene typingSpeedMode = new Scene(root);
+
+        stage = (Stage) menuPane.getScene().getWindow();
+        stage.setScene(typingSpeedMode);
+        stage.show();
+    }
+
 }
