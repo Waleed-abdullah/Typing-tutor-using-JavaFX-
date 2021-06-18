@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("loginScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Scenes/loginScreen.fxml"));
 
         primaryStage.getIcons().add(new Image("icons/atom.png"));
         primaryStage.setTitle("Atomic Type");
