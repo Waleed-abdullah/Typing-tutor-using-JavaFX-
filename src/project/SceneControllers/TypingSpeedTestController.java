@@ -111,7 +111,8 @@ public class TypingSpeedTestController implements Initializable {
         //Initially Elapsed time is set to 0.
         timeLabel.setText("00:00");
 
-        timeline = new Timeline(new KeyFrame(Duration.millis(1), new EventHandler<ActionEvent>() {
+        timeline = new Timeline(new KeyFrame(Duration.millis(1),
+                    new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 changeTime();
@@ -147,17 +148,16 @@ public class TypingSpeedTestController implements Initializable {
         //the method for the test from here
         loadTest();
 
-
     }
 
     private void loadTest() {
         try {
-           //to grab a random file
+            //to grab a random file
             int max = 5;
             int min = 1;
-            int random = (int)Math.floor(Math.random()*(max-min+1)+min);
-           //loading a random test from the file
-            BufferedReader reader = new BufferedReader(new FileReader(new File("src/project/textFiles/Test"+random+".txt")));
+            int random = (int) Math.floor(Math.random() * (max - min + 1) + min);
+            //loading a random test from the file
+            BufferedReader reader = new BufferedReader(new FileReader(new File("src/project/textFiles/Test" + random + ".txt")));
             String line;
             while ((line = reader.readLine()) != null) {
                 textDisplay.setText(textDisplay.getText() + line);
@@ -233,7 +233,7 @@ public class TypingSpeedTestController implements Initializable {
 
     //method for showing result on the screen
     private void showResult() {
-        calculator = new TypingDataCalculator(typedKS,errorCount, 60);
+        calculator = new TypingDataCalculator(typedKS, errorCount, 60);
 
         WPM.setText(Integer.toString(calculator.calculateWPM()));
         Accuracy.setText(String.format("%.1f", calculator.calculateAccuracy()) + "%");
