@@ -1,13 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="650.0" prefWidth="1100.0">
-
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@ScoreSummary.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.SceneControllers.ScoreSummaryController">
+   <children>
+      <ImageView fitHeight="44.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backToMenu" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/left-arrow.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <AnchorPane layoutX="170.0" layoutY="131.0" prefHeight="387.0" prefWidth="334.0" style="-fx-background-color: grey;">
+         <children>
+            <Label layoutX="76.0" layoutY="14.0" prefHeight="34.0" prefWidth="182.0" style="-fx-font-weight: bold;" text="Previous summary">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="65.0" prefHeight="42.0" prefWidth="82.0" text="Taken on:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="107.0" prefHeight="42.0" prefWidth="114.0" text="Speed(WPM):">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="149.0" prefHeight="42.0" prefWidth="82.0" text="Accuracy:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="191.0" prefHeight="42.0" prefWidth="136.0" text="Total KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="233.0" prefHeight="42.0" prefWidth="158.0" text="Correct KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="275.0" prefHeight="42.0" prefWidth="158.0" text="Wrong KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumTestTime" layoutX="102.0" layoutY="69.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumSpeed" layoutX="128.0" layoutY="111.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumAccuracy" layoutX="102.0" layoutY="153.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumKS" layoutX="156.0" layoutY="195.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumCorrectKS" layoutX="174.0" layoutY="237.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="prevSumWrongKS" layoutX="167.0" layoutY="279.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="606.0" layoutY="131.0" prefHeight="387.0" prefWidth="334.0" style="-fx-background-color: grey;">
+         <children>
+            <Label layoutX="81.0" layoutY="14.0" prefHeight="34.0" prefWidth="172.0" style="-fx-font-weight: bold;" text="Current summary">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="69.0" prefHeight="42.0" prefWidth="114.0" text="Speed(WPM):">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="111.0" prefHeight="42.0" prefWidth="82.0" text="Accuracy:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="152.0" prefHeight="42.0" prefWidth="136.0" text="Total KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="190.0" prefHeight="42.0" prefWidth="158.0" text="Correct KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="234.0" prefHeight="42.0" prefWidth="158.0" text="Wrong KeyStrokes:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currSpeed" layoutX="138.0" layoutY="73.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currAcc" layoutX="102.0" layoutY="115.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currKS" layoutX="167.0" layoutY="157.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currCorrectKS" layoutX="181.0" layoutY="195.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="currWrongKS" layoutX="181.0" layoutY="239.0" prefHeight="33.0" prefWidth="130.0" text="Label">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="415.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#nextSummary" prefHeight="42.0" prefWidth="90.0" style="-fx-border-radius: 500; -fx-background-color: green; -fx-font-weight: bold;" text="next" />
+      <Button layoutX="170.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#prevSummary" prefHeight="42.0" prefWidth="90.0" style="-fx-border-radius: 500; -fx-background-color: green; -fx-font-weight: bold;" text="previous" />
+   </children>
 </AnchorPane>
