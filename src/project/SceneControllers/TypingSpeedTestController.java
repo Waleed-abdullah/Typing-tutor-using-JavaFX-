@@ -152,7 +152,12 @@ public class TypingSpeedTestController implements Initializable {
 
     private void loadTest() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File("src/project/textFiles/Test.txt")));
+           //to grab a random file
+            int max = 5;
+            int min = 1;
+            int random = (int)Math.floor(Math.random()*(max-min+1)+min);
+           //loading a random test from the file
+            BufferedReader reader = new BufferedReader(new FileReader(new File("src/project/textFiles/Test"+random+".txt")));
             String line;
             while ((line = reader.readLine()) != null) {
                 textDisplay.setText(textDisplay.getText() + line);

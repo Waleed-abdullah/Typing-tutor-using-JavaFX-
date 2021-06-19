@@ -19,7 +19,7 @@ public class Main extends Application {
 
         primaryStage.setWidth(1100);
         primaryStage.setHeight(650);
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        //primaryStage.initStyle(StageStyle.UNDECORATED);
 
         primaryStage.setResizable(false);
 
