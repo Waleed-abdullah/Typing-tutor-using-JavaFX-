@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@initialScreens.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.SceneControllers.LoginScreenController">
+   <children>
+      <Pane prefHeight="111.0" prefWidth="1100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#0f4cb4" layoutX="494.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial, sans-serif; -fx-font-size: 2.5em; -fx-font-weight: Bolder; -fx-fill: white;" text="Rapid Keyz" textAlignment="CENTER" wrappingWidth="211.73675537109375" />
+            <ImageView fitHeight="102.0" fitWidth="124.0" layoutX="370.0" layoutY="-5.0">
+               <image>
+                  <Image url="@../../icons/keyboard.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backToWelcome" pickOnBounds="true">
+               <image>
+                  <Image url="@../../icons/left-arrow.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <VBox layoutX="386.0" layoutY="183.0" prefHeight="235.0" prefWidth="300.0">
+         <children>
+            <HBox alignment="CENTER" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../../icons/man.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="userNameField" prefHeight="29.0" prefWidth="274.0" promptText="Username" style="-fx-background-color: transparent; -fx-font-weight: bold;" styleClass="inputField" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="302.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../../icons/key.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="passwordField" prefHeight="29.0" prefWidth="274.0" promptText="Password" style="-fx-background-color: transparent; -fx-font-weight: bold;" styleClass="inputField">
+                     <font>
+                        <Font size="14.0" />
+                     </font></PasswordField>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="308.0" style="-fx-background-color: transparent; -fx-background-radius: 100; -fx-text-fill: white; -fx-font-family: Arial, Helvetica, sans-serif; -fx-border-color: black; -fx-border-radius: 100; -fx-font-weight: bold;" text="Login">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="412.0" layoutY="423.0" text="Don't have an account?" textFill="WHITE" />
+      <Button layoutX="550.0" layoutY="419.0" mnemonicParsing="false" onAction="#switchToSignUp" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Sign up" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Label fx:id="errorLabel" layoutX="384.0" layoutY="158.0" prefHeight="18.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

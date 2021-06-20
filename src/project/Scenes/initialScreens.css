@@ -1,0 +1,8 @@
+.root {
+-fx-background-image:url('../images/redMountain.jpg');
+-fx-background-size:cover;
+}
+
+.inputField{
+-fx-text-inner-color: white;
+}

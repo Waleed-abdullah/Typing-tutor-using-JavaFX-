@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@MenuPage.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.SceneControllers.MenuPageController">
+   <children>
+      <AnchorPane layoutX="187.0" layoutY="-25.0" prefHeight="124.0" prefWidth="1100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="backButton" fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/left-arrow.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="281.0" layoutY="23.0" prefHeight="78.0" prefWidth="537.0" styleClass="mainHeader" text="Welcome to the Main menu" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="192.0" layoutY="258.0" onMouseClicked="#openTypingSpeedMode" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-radius: 50;">
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="71.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/keyboard.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="28.0" layoutY="80.0" prefHeight="39.0" prefWidth="127.0" styleClass="options" text="Typing Speed Test" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Text fill="#faf7f7" layoutX="8.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="This tests your typing speed and accuracy against different words" wrappingWidth="183.71051025390625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutX="450.0" layoutY="258.0" onMouseClicked="#openRandomLettersTest" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-radius: 50;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="71.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/document.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="31.0" layoutY="80.0" prefHeight="39.0" prefWidth="138.0" styleClass="options" text="Random letters Test" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Text fill="#faf7f7" layoutX="9.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="This allows you to practice typing random combinations of letters " wrappingWidth="183.71051025390625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <AnchorPane layoutX="710.0" layoutY="258.0" onMouseClicked="#openScoreSummary" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-radius: 50;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+            <ImageView fitHeight="67.0" fitWidth="71.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../icons/report.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="44.0" layoutY="80.0" prefHeight="39.0" prefWidth="111.0" styleClass="options" text="Score summary" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Text fill="#faf7f7" layoutX="8.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="View your score summary" wrappingWidth="183.71051025390625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
