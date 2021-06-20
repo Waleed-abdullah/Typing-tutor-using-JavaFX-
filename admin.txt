@@ -1,0 +1,8 @@
+Summary
+Time: 2021/06/20 18:22:55
+Speed: 64
+Accuracy: 87.5%
+Total Keystrokes: 320
+Correct Keystrokes: 280
+Wrong Keystrokes: 40
+_ _ _ _ _ _ _ _ _ _ _
